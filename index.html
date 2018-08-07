@@ -1,12 +1,25 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet"
+      href="fonts/play/Play-Regular.ttf">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Data Sync</title>
 </head>
 <body>
-    <div>
-        <h1>Olá Mundo!</h1>
+    <div class="container">
+        <h1>Bem vindo ao Data Sync</h1>
+        <p>Selecione a pasta principal:</p>
+        <div class="row">
+            <input type="url" name="source" id="src">
+            <button>Procurar</button>
+        </div>
+        <p>Selecione a pasta secundária:</p>
+        <div class="row">
+            <input type="url" name="destination" id="dst">
+            <button>Procurar</button>
+        </div>
     </div>
 </body>
 </html>

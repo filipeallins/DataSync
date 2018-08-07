@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "play";
+    src: url("fonts/play/Play-Regular.ttf");
+}
+
+@font-face {
+    font-family: "playBold";
+    src: url("fonts/play/Play-Bold.ttf");
+}
+
+.container {
+    font-family: "play";
+    text-align: center;
+    color: #E5E7E9;
+}
+
+button {
+    font-family: "playBold";
+}
