@@ -1,0 +1,23 @@
+{
+  "name": "data-sync",
+  "version": "1.0.0",
+  "description": "Data syncronizer app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipeaugustolins/DataSync.git"
+  },
+  "keywords": [
+    "Data",
+    "Synchronize"
+  ],
+  "author": "Filipe Lins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipeaugustolins/DataSync/issues"
+  },
+  "homepage": "https://github.com/filipeaugustolins/DataSync#readme"
+}
