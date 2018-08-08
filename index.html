@@ -2,24 +2,31 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet"
-      href="fonts/play/Play-Regular.ttf">
+    <script type="text/javascript" src="sync.js"></script>
+    <link rel="stylesheet" href="fonts/play/Play-Regular.ttf">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Data Sync</title>
 </head>
 <body>
+    <div id="btn">
+        <button onclick="window.close()">x</button>
+    </div>
     <div class="container">
         <h1>Bem vindo ao Data Sync</h1>
-        <p>Selecione a pasta principal:</p>
+        <p>Selecione a pasta de origem:</p>
         <div class="row">
-            <input type="url" name="source" id="src">
-            <button>Procurar</button>
+            <input id="srcInput" class="hidden" type="file" WebKitDirectory />
+            <p id="srcPath">Nenhuma pasta selecionada <button id="src" onclick="getSrcPath()">Procurar</button></p>
         </div>
-        <p>Selecione a pasta secundária:</p>
+        <p>Selecione a pasta de destino:</p>
         <div class="row">
-            <input type="url" name="destination" id="dst">
-            <button>Procurar</button>
+            <input id="dstInput" class="hidden" type="file" webkitdirectory />
+            <p id="dstPath">Nenhuma pasta selecionada <button id="dst" onclick="getDstPath()">Procurar</button></p>
         </div>
+        <button id="sync" onclick="test()">Sincroizar</button>
+    </div>
+    <div id="footer">
+        <p>Desenvolvido por Filipe Lins</p>
     </div>
 </body>
 </html>

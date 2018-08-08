@@ -8,12 +8,30 @@
     src: url("fonts/play/Play-Bold.ttf");
 }
 
-.container {
+body {
+    background-color: #34495E;
     font-family: "play";
-    text-align: center;
     color: #E5E7E9;
 }
 
-button {
+#btn {
+    text-align: right;
+}
+
+#footer {
+    align-self: baseline;
+    font-size: small;
+    text-align: right;
+}
+
+input, button {
     font-family: "playBold";
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }

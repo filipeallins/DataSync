@@ -1,16 +1,22 @@
 const {app, BrowserWindow} = require('electron')
-  
+//const remote = require('electron').remote;
+
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
   let win
-  
+
   function createWindow () {
     // Criar uma janela de navegação.
-    win = new BrowserWindow({backgroundColor: "#34495E"})
+    win = new BrowserWindow({width: 480, height: 340, frame: false, transparent: true, show: false})
   
     // e carrega index.html do app.
     win.loadFile('index.html')
-  
+    
+    // Carrega janela apenas quando o conteúdo está carregado.
+    win.once('ready-to-show', () => {
+      win.show()
+    })
+
     // Open the DevTools.
     //win.webContents.openDevTools()
   
@@ -47,3 +53,13 @@ const {app, BrowserWindow} = require('electron')
   
   // Neste arquivo, você pode incluir o resto do seu aplicativo especifico do processo
   // principal. Você também pode colocar eles em arquivos separados e requeridos-as aqui.
+ 
+/*document.getElementById("min-btn").addEventListener("click", function (e) {
+  var window = remote.getCurrentWindow();
+  window.minimize(); 
+});
+
+document.getElementById("close-btn").addEventListener("click", function (e) {
+  var window = remote.getCurrentWindow();
+  window.close();
+});*/
